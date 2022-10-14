@@ -1,0 +1,51 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.loader-text {
+  display: inline;
+}
+
+.loader-text:after {
+  content: 'Loading';
+  animation: load 2s linear infinite;
+}
+
+
+@keyframes load {
+  0% {
+    content: 'Processing';
+  }
+  33% {
+    content: 'Processing.';
+  }
+  67% {
+    content: 'Processing..';
+  }
+  100% {
+    content: 'Processing...';
+  }
+}
